@@ -5,8 +5,8 @@ name: CI
 # Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
+  release:
+    types: [published]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,8 +34,9 @@ jobs:
         with:
           ref: 'gh-pages'
         run: |
-          git commit -m "Automated report"
-          git push origin gh-pages
+          echo ${{ github.event.release.tag_name }}
+          git commit -m "new release ${{ github.event.release.tag_name }}"
+          git push -f origin gh-pages
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
