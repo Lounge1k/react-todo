@@ -37,8 +37,10 @@ jobs:
         run: |
           echo "test"
           echo ${{ github.ref }}
+          git show-ref
           git config --global user.name 'lounge1k'
           git config --global user.email 'lounge1k@gmail.com'
+          git show-ref
           git add -f build
           git commit -m "new release ${{ github.ref }}"
           git push -f origin gh-pages
