@@ -33,7 +33,7 @@ jobs:
         run: yarn build
 
       - name: Publish
-        run: |s
+        run: |
           echo ${{ github.event.release.tag_name }}
           git config --global user.name 'lounge1k'
           git config --global user.email 'lounge1k@gmail.com'
