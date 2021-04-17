@@ -29,10 +29,11 @@ jobs:
       - name: Test
         run: yarn test
 
-      - name: Publish
         uses: actions/checkout@v2
         with:
           ref: 'gh-pages'
+
+      - name: Publish
         run: |
           echo ${{ github.event.release.tag_name }}
           git commit -m "new release ${{ github.event.release.tag_name }}"
