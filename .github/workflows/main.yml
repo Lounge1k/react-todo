@@ -35,6 +35,7 @@ jobs:
 
       - name: Publish
         run: |
+          echo "test"
           echo ${{ github.ref }}
           git config --global user.name 'lounge1k'
           git config --global user.email 'lounge1k@gmail.com'
