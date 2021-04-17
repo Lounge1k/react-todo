@@ -41,5 +41,5 @@ jobs:
           git config --global user.email 'lounge1k@gmail.com'
           git add -f build
           git commit -m "new release ${{ github.event.release.tag_name }}"
-          git push -f origin `git subtree split --prefix build $GITHUB_REF`:gh-pages
+          git push -f origin `git subtree split --prefix build ${{ $GITHUB_REF }}`:gh-pages
 
