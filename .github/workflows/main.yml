@@ -5,9 +5,8 @@ name: CI
 # Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
 
       # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,29 +26,18 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: Build
-        run: yarn build
-
       - name: Test
         run: yarn test
 
+      - name: Build
+        run: yarn build
+
       - name: Publish
-        run: |
-          echo "test"
-          echo ${{ github.ref }}
-          git show-ref
+        run: |s
+          echo ${{ github.event.release.tag_name }}
           git config --global user.name 'lounge1k'
           git config --global user.email 'lounge1k@gmail.com'
           git add -f build
-          git commit -m "new release ${{ github.ref }}"
+          git commit -m "new release ${{ github.event.release.tag_name }}"
           git push origin `git subtree split --prefix build master`:gh-pages --force
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
