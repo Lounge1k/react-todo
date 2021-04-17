@@ -33,10 +33,6 @@ jobs:
       - name: Test
         run: yarn test
 
-      - uses: actions/checkout@v2
-        with:
-          ref: 'gh-pages'
-
       - name: Publish
         run: |
           echo ${{ github.event.release.tag_name }}
