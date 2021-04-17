@@ -42,7 +42,7 @@ jobs:
           git config --global user.email 'lounge1k@gmail.com'
           git add -f build
           git commit -m "new release ${{ github.ref }}"
-          git subtree push --prefix dist origin gh-pages
+          git subtree push --prefix build origin gh-pages
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
