@@ -1,0 +1,29 @@
+@value xs, s from "../styles/spacings.css";
+@value dark, light from "../styles/colors.css";
+
+.InputWrapper {
+    position: relative;
+}
+
+.Input {
+    display: inline-block;
+    color: dark;
+    font-size: 32px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid palevioletred;
+    padding-left: xs;
+    width: 100%;
+}
+
+.Btn {
+    cursor: pointer;
+    width: 32px;
+    height: 100%;
+    display: inline-block;
+    font-size: 32px;
+    background-color: palevioletred;
+    color: dark;
+    border: 2px solid palevioletred;
+    position: absolute;
+    right: 0;
+}

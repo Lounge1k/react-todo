@@ -1,0 +1,9 @@
+@value m from '../styles/spacings.css';
+
+.TodoList {
+    margin-top: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%
+}
