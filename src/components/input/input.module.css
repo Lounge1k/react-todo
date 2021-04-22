@@ -1,0 +1,41 @@
+@value space_xs, space_s from "../../styles/spacings.css";
+@value color_dark, color_focus from "../../styles/colors.css";
+@value font_m from "../../styles/typings.css";
+
+.InputWrapper {
+    position: relative;
+}
+
+
+.Input:focus {
+    border-color: color_focus;
+}
+
+
+.Input {
+    display: inline-block;
+    color: color_dark;
+    font-size: font_m;
+    border-radius: 5px;
+    border: 2px solid palevioletred;
+    padding-left: space_xs;
+    width: 100%;
+}
+
+.Btn {
+    cursor: pointer;
+    width: 32px;
+    height: 100%;
+    display: inline-block;
+    font-size: font_m;
+    background-color: palevioletred;
+    color: color_dark;
+    border-radius: 0 5px 5px 0;
+    border: 2px solid palevioletred;
+    position: absolute;
+    right: 0;
+}
+
+.Btn:focus {
+    border-color: color_focus;
+}

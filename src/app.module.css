@@ -1,5 +1,6 @@
-@value dark, light from "./styles/colors.css";
-@value xs, l from "./styles/spacings.css";
+@value color_dark, color_light from "./styles/colors.css";
+@value space_xs, space_l from "./styles/spacings.css";
+@value font_l from "./styles/typings.css";
 
 main {
     max-width: 380px;
@@ -9,7 +10,7 @@ main {
 .Wrapper {
     height: 100%;
     min-height: 100vh;
-    background-color: dark;
+    background-color: color_dark;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,9 +19,9 @@ main {
 .AppHeader {
     display: flex;
     justify-content: center;
-    font-size: calc(10px + 5vmin);
-    color: light;
+    font-size: font_l;
+    color: color_light;
     box-sizing: border-box;
-    padding-block-start: xs;
-    margin-block-end: l;
+    padding-block-start: space_xs;
+    margin-block-end: space_l;
 }

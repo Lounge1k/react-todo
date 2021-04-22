@@ -11,16 +11,14 @@ export class ToDoStore {
         makeAutoObservable(this)
     }
 
-    completeTodo = (id: number) => {
+    completeTodo = (id: number): void => {
         const todoItem = this.getTodoItemById(id);
-        console.log(todoItem);
         if (todoItem) {
             todoItem.completed = !todoItem.completed;
-            console.log(todoItem.completed);
         }
     }
 
-    addToDo = (name: string) => {
+    addToDo = (name: string): void => {
         const todo = {
             name,
             id: ++this.id,
@@ -29,7 +27,7 @@ export class ToDoStore {
         this.todos.push(todo);
     }
 
-    private getTodoItemById = (id: number):ToDoItem | undefined => {
+    private getTodoItemById = (id: number): ToDoItem | undefined => {
         return this.todos.find(item => item.id === id)
     }
 

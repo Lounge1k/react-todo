@@ -1,0 +1,42 @@
+@value color_dark, color_light, color_focus from '../../styles/colors.css';
+@value space_xs, space_s from '../../styles/spacings.css';
+@value font_m from "../../styles/typings.css";
+
+.TodoListItem__Wrapper {
+    font-size: font_m;
+    margin-bottom: space_s;
+    position: relative;
+    width: 100%;
+    cursor: move;
+    background-color: palevioletred;
+    transform: rotateX(0);
+    transition: transform .3s;
+    border: 2px solid transparent;
+}
+
+.TodoListItem__Wrapper:focus {
+    border-color: color_focus;
+}
+
+.TodoListItem__Completed {
+    background-color: orange;
+    transform: rotateX(180deg);
+}
+
+.TodoListItem__Completed .TodoListItem__Name {
+    text-decoration: line-through;
+    text-decoration-color: inherit;
+    transform: rotateX(180deg);
+}
+
+.TodoListItem__Wrapper:hover .TodoListItem__BtnComplete {
+    display: inline-block;
+}
+
+.TodoListItem__Name {
+    color: color_light;
+    padding-left: space_xs;
+    text-decoration-color: transparent;
+    transition: text-decoration-color .3s;
+}
+

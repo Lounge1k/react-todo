@@ -1,0 +1,10 @@
+@value space_m from '../../styles/spacings.css';
+@value font_m from "../../styles/typings.css";
+
+.TodoList {
+    margin-top: space_m;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%
+}

@@ -1,8 +1,5 @@
-@value xs: 10px;
-@value s: 15px;
-@value m: 20px;
-@value l: 30px;
+@value space_xs: 10px;
+@value space_s: 15px;
+@value space_m: 20px;
+@value space_l: 30px;
 
-@media screen and (max-width: 768px) {
-    @value xs 25px;
-}

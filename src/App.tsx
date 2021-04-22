@@ -1,7 +1,7 @@
-import Input from './components/input.component';
+import Input from './components/input/input.component';
 import styles from './app.module.css';
 import { observer } from 'mobx-react-lite';
-import ToDoList from "./components/todo-list.component";
+import ToDoList from "./components/todo-list/todo-list.component";
 
 const App = observer(() => {
     return (

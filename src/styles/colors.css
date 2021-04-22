@@ -1,2 +1,3 @@
-@value dark: #282c34;
-@value light: #fff;
+@value color_dark: #282c34;
+@value color_light: #fff;
+@value color_focus: red;

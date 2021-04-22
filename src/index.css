@@ -16,8 +16,8 @@ body {
 }
 
 * {
-    outline: none;
     box-sizing: border-box;
+    outline: none;
 }
 
 code {

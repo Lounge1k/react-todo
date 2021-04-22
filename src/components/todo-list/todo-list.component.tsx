@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import { observer } from "mobx-react-lite"
-import {StoreContext} from '../store';
+import {StoreContext} from '../../store';
 import style from './todo-list.module.css'
-import TodoListItem from "./todo-list-item.component";
+import TodoListItem from "../todo-list-item/todo-list-item.component";
 
 const ToDoList = observer(() => {
     const {todos} = useContext(StoreContext);
